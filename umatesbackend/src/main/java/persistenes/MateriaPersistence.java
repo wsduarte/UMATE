@@ -7,11 +7,13 @@ package persistenes;
 
 import entities.Materia;
 import java.util.List;
+import javax.ejb.Stateless;
 
 /**
  *
  * @author ws.duarte
  */
+@Stateless
 public class MateriaPersistence extends GPersistence<Materia>{
 
     public MateriaPersistence() {

@@ -9,16 +9,16 @@ import entities.BaseEntity;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
 import javax.persistence.TypedQuery;
-import org.eclipse.persistence.config.QueryType;
 /**
  *
  * @author ws.duarte
  * @param <Entidad>
  */
+@Stateless
 public abstract class GPersistence <Entidad extends BaseEntity>
 {
     protected Class<Entidad> clase;
@@ -72,8 +72,8 @@ public abstract class GPersistence <Entidad extends BaseEntity>
     protected List<Entidad> find(String[] criterios, Object[] valores) {
         logInf("Comenzando consulta multicriterio "+clase.getSimpleName());
         if(criterios.length != valores.length) throw new IllegalArgumentException("No se ingresaron adecuadamente los criterios y valores. \n Por cada criterio debe aver un valor");
-        String queryS = "Select c FROM " + clase.getSimpleName() + " c where ";
-        for(int i = 0; i < criterios.length; i++) queryS+= "c."+criterios[i]+" :val"+i;
+        String queryS = "Select c FROM " + clase.getSimpleName() + " c where c."+criterios[0]+" = :val0";
+        for(int i = 1; i < criterios.length; i++) queryS+= "and c."+criterios[i]+" = :val"+i;
         TypedQuery<Entidad> query = em.createQuery(queryS, clase);
         for(int i = 0; i < valores.length; i++) query.setParameter("val"+i, valores[i]);
         return query.getResultList();
