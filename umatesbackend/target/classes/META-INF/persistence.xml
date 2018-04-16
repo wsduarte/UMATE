@@ -3,6 +3,10 @@
   <persistence-unit name="umatePU" transaction-type="JTA">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>java:app/jdbc/umate</jta-data-source>
+    <class>entities.Materia</class>
+    <class>entities.Estudiante</class>
+    <class>entities.Pensum</class>
+    <class>entities.Semestre</class>
     <properties>
       <property name="eclipselink.logging.level" value="FINE"/>
       <property name="eclipselink.ddl-generation" value="create-or-extend-tables"/>
