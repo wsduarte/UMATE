@@ -41,7 +41,7 @@ public class EstudianteLogic extends GLogic<Estudiante>{
         pensum.setEstudiante(ret);
         return ret;
     }
-//    
+    
     private EstudiantePersistence getPersistence() {
         return (EstudiantePersistence) persistence;
     }
