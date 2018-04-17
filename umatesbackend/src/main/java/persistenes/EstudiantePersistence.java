@@ -6,6 +6,7 @@
 package persistenes;
 
 import entities.Estudiante;
+import java.util.List;
 import javax.ejb.Stateless;
 
 /**
@@ -19,8 +20,8 @@ public class EstudiantePersistence extends GPersistence<Estudiante>{
         this.clase = Estudiante.class;
     }
     
-    public Estudiante findByName(String name) {
-        return find("nombre",name).get(0);
+    public List<Estudiante> findByName(String name) {
+        return find("nombre",name);
     }
     
     public Estudiante findByCode(String code) {
