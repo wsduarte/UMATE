@@ -13,12 +13,12 @@ import java.util.List;
  */
 public class MeteriaFiltro {
     
-    private String codigo; //llave
+    public String codigo; //llave
     //filtros <Con los que comparo>
-    private Integer promedioEstimado;
-    private Integer dificultadEstimada;
-    private Boolean obligatoria;
-    private Integer creditos;
+    public Integer promedioEstimado;
+    public Integer dificultadEstimada;
+    public Boolean obligatoria;
+    public Integer creditos;
     //materias que desbloquea
     
     private List<String> sucesores;
@@ -62,6 +62,12 @@ public class MeteriaFiltro {
     public void setObligatoria(Boolean obligatoria) {
         this.obligatoria = obligatoria;
     }
-    
-    
+
+    public Integer getCreditos() {
+        return creditos;
+    }
+
+    public void setCreditos(Integer creditos) {
+        this.creditos = creditos;
+    }
 }
