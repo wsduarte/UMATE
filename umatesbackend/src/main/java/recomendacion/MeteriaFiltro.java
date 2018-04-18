@@ -14,6 +14,9 @@ import java.util.List;
 public class MeteriaFiltro {
     
     private String codigo; //llave
+    private Integer promedioEstimado;
+    private Integer dificultadEstimada;
+    private Boolean obligatoria;
     private List<String> sucesores;
 
     public String getCodigo() {
