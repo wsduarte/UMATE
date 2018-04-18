@@ -14,9 +14,13 @@ import java.util.List;
 public class MeteriaFiltro {
     
     private String codigo; //llave
+    //filtros <Con los que comparo>
     private Integer promedioEstimado;
     private Integer dificultadEstimada;
     private Boolean obligatoria;
+    private Integer creditos;
+    //materias que desbloquea
+    
     private List<String> sucesores;
 
     public String getCodigo() {
@@ -33,6 +37,30 @@ public class MeteriaFiltro {
 
     public void setSucesores(List<String> sucesores) {
         this.sucesores = sucesores;
+    }
+
+    public Integer getPromedioEstimado() {
+        return promedioEstimado;
+    }
+
+    public void setPromedioEstimado(Integer promedioEstimado) {
+        this.promedioEstimado = promedioEstimado;
+    }
+
+    public Integer getDificultadEstimada() {
+        return dificultadEstimada;
+    }
+
+    public void setDificultadEstimada(Integer dificultadEstimada) {
+        this.dificultadEstimada = dificultadEstimada;
+    }
+
+    public Boolean getObligatoria() {
+        return obligatoria;
+    }
+
+    public void setObligatoria(Boolean obligatoria) {
+        this.obligatoria = obligatoria;
     }
     
     
