@@ -19,6 +19,7 @@ public class Materia extends BaseEntity {
     private String nombre;
     private Integer creditos;
     private String codigo;
+    private Integer nivel;
     private List<String> prerequisitos;
     private List<String> corequisitos;
     @ManyToOne
@@ -73,5 +74,13 @@ public class Materia extends BaseEntity {
 
     public void setSemestre(Semestre semestre) {
         this.semestre = semestre;
+    }
+
+    public Integer getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(Integer nivel) {
+        this.nivel = nivel;
     }
 }

@@ -15,6 +15,7 @@ public class MateriaDTO {
     
     private String nombre;
     private Integer creditos;
+    private Integer nivel;
     private String codigo;
     private List<String> prerequisitos;
     private List<String> corequisitos;
@@ -58,5 +59,12 @@ public class MateriaDTO {
     public void setCorequisitos(List<String> corequisitos) {
         this.corequisitos = corequisitos;
     }
-    
+
+    public Integer getNivel() {
+        return nivel;
+    }
+
+    public void setNivel(Integer nivel) {
+        this.nivel = nivel;
+    }
 }
