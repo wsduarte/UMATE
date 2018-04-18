@@ -17,8 +17,8 @@ public class ConvertSemestre extends GConvert<SemestreDTO, Semestre>{
 
     public ConvertSemestre() {
         super(SemestreDTO.class,Semestre.class);
+        
     }
-    
     
     
 }

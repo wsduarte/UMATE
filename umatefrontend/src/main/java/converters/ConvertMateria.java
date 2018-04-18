@@ -22,7 +22,4 @@ public class ConvertMateria extends GConvert<MateriaDTO, Materia>{
     }
     
     
-    
-    
-    
 }

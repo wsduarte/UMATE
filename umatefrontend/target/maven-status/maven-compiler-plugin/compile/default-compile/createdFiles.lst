@@ -1,5 +1,10 @@
-dto\PensumDTO.class
 dto\SemestreDTO.class
+converters\ConvertMateria.class
+dto\EstudianteDTO.class
+converters\Convert.class
+converters\ConvertSemestre.class
+converters\ConvertPensum.class
+converters\ConvertEstudiante.class
+dto\PensumDTO.class
 services\MateriaService.class
 dto\MateriaDTO.class
-dto\EstudianteDTO.class
