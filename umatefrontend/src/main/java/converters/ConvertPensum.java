@@ -6,18 +6,19 @@
 package converters;
 
 import convert.GConvert;
-import dto.EstudianteDTO;
-import entities.Estudiante;
+import dto.PensumDTO;
+import entities.Pensum;
 
 /**
  *
  * @author ws.duarte
  */
-public class ConvertEstudiante extends GConvert<EstudianteDTO, Estudiante>{
+public class ConvertPensum extends GConvert<PensumDTO, Pensum>{
 
-    public ConvertEstudiante() {
-        super(EstudianteDTO.class, Estudiante.class);
+    public ConvertPensum() {
+        super(PensumDTO.class, Pensum.class);
     }
     
-  
+    
+    
 }

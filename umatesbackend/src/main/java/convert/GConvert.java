@@ -5,6 +5,7 @@
  */
 package convert;
 
+import entities.BaseEntity;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -45,13 +46,16 @@ public abstract class GConvert<DTO, Entidad> {
         Arrays.sort(fieldDTO, comp);
         Arrays.sort(fieldEntidad, comp);
         for (int i = 0; i < fieldEntidad.length; i++) {
-            if (fieldDTO[i].getName().equals(fieldEntidad[i].getName()) && fieldDTO[i].getType().getName().equals(fieldEntidad[i].getType().getName())) {
+            if (fieldDTO[i].getName().equals(fieldEntidad[i].getName()) 
+                    && fieldDTO[i].getType().getName().equals(fieldEntidad[i].getType().getName()) 
+                    && !fieldEntidad[i].getType().getSuperclass().getName().equals(BaseEntity.class.getName())) {
                 tempDTO.add(fieldDTO[i]);
                 tempEntidad.add(fieldEntidad[i]);
             }
         }
         this.fieldDTO = (Field[]) tempDTO.toArray();
         this.fieldEntidad = (Field[]) tempEntidad.toArray();
+        System.out.println("Los atributos aceptados: "+Arrays.toString(fieldDTO));
     }
 
     public DTO toDTO(Entidad entidad) {
