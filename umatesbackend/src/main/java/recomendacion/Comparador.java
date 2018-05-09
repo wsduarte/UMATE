@@ -45,7 +45,7 @@ public class Comparador {
     }
 
     public static Comparator<MeteriaFiltro> filtrar(Criterio... criterios) {
-        return (MeteriaFiltro o1, MeteriaFiltro o2) -> {
+        return (o1, o2) -> {
             try {
                 int ret = 0;
                 Field crit = null;
